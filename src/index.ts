@@ -27,6 +27,7 @@ if (require.main === module) {
       // See https://www.npmjs.com/package/stoppable
       gracePeriodForClose: 5000, // 5 seconds
       openApiSpec: {
+        disabled: true,
         // useful when used with OpenAPI-to-GraphQL to locate your application
         setServersFromRequest: true,
       },
