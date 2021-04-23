@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TestApiApplication = void 0;
 const tslib_1 = require("tslib");
 const boot_1 = require("@loopback/boot");
-const rest_explorer_1 = require("@loopback/rest-explorer");
 const repository_1 = require("@loopback/repository");
 const rest_1 = require("@loopback/rest");
 const service_proxy_1 = require("@loopback/service-proxy");
@@ -17,10 +16,10 @@ class TestApiApplication extends boot_1.BootMixin(service_proxy_1.ServiceMixin(r
         // Set up default home page
         this.static('/', path_1.default.join(__dirname, '../public'));
         // Customize @loopback/rest-explorer configuration here
-        this.configure(rest_explorer_1.RestExplorerBindings.COMPONENT).to({
-            path: '/explorer',
-        });
-        this.component(rest_explorer_1.RestExplorerComponent);
+        // this.configure(RestExplorerBindings.COMPONENT).to({
+        //   path: '/explorer',
+        // });
+        // this.component(RestExplorerComponent);
         this.projectRoot = __dirname;
         // Customize @loopback/boot Booter Conventions here
         this.bootOptions = {
