@@ -31,8 +31,7 @@
     "migrate": "node ./dist/migrate",
     "preopenapi-spec": "npm run build",
     "openapi-spec": "node ./dist/openapi-spec",
-    "prestart": "npm run rebuild",
-    "start": "node -r source-map-support/register .",
+    "start": "node .",
     "clean": "lb-clean dist *.tsbuildinfo .eslintcache",
     "rebuild": "npm run clean && npm run build"
   },
@@ -61,11 +60,11 @@
   },
   "devDependencies": {
     "@loopback/build": "^6.3.1",
-    "source-map-support": "^0.5.19",
+    "@loopback/eslint-config": "^10.1.1",
     "@loopback/testlab": "^3.3.1",
     "@types/node": "^10.17.56",
-    "@loopback/eslint-config": "^10.1.1",
     "eslint": "^7.23.0",
+    "source-map-support": "^0.5.19",
     "typescript": "~4.2.3"
   }
 }
